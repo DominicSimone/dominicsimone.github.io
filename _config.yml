@@ -1,0 +1,52 @@
+title: Dominic's Corner
+description: Some writing and some gaming.
+# Important for GitHub Pages:
+# url: https://<your-username>.github.io  # Or your custom domain
+# baseurl: "" # Usually empty for user/org pages, or /repository-name for project pages
+
+# --- Build Settings ---
+markdown: kramdown
+# Use the GitHub Pages gem locally for better compatibility
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  # Add other plugins if needed (ensure they are supported by GitHub Pages or use Actions)
+
+# --- Collections ---
+collections:
+  games: # Name of the collection
+    output: true # Generate individual pages for each game (e.g., /games/cool-blaster/)
+    permalink: /games/:title/ # URL structure for individual game pages
+    sort_by: date # Default sort order for the collection (add 'date' to game front matter)
+
+# --- Defaults ---
+# Set default layouts for posts and games
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "games" # Matches the collection name
+    values:
+      layout: "game" # Use 'game' layout for individual game pages
+      # You could add other default game metadata here if desired
+  - scope:
+      path: "" # All other top-level pages
+      type: "pages"
+    values:
+      layout: "page"
+
+# --- Exclude from processing ---
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE

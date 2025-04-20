@@ -1,0 +1,16 @@
+{% comment %} Expects a 'game' variable {% endcomment %}
+<div class="game-card">
+  {% if game.thumbnail %}
+    <a href="{{ game.url | relative_url }}"> {# Link to the individual game page #}
+      <img src="{{ game.thumbnail | relative_url }}" alt="{{ game.title }} thumbnail" class="game-thumbnail">
+    </a>
+  {% endif %}
+  <h3><a href="{{ game.url | relative_url }}">{{ game.title }}</a></h3>
+  {% if game.date %}
+    <p><small>Added: {{ game.date | date: "%B %d, %Y" }}</small></p>
+  {% endif %}
+  <p>{{ game.description | markdownify }}</p>
+  <p><strong>Controls:</strong> {{ game.controls }}</p>
+  {# Optional: Direct link to play if not using individual pages, or add play button here #}
+  {# <a href="path/to/wasm-player?cartridge={{ game.cartridge | relative_url }}">Play Now</a> #}
+</div>
