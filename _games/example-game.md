@@ -12,5 +12,4 @@ controls: "Arrows: Move, Z: Shoot, X: Bomb"
 # categories: [shooter, action]
 ---
 
-# Optional: Add more detailed markdown content here if the 'game' layout uses {{ content }}
 This is where you could write more about the game's development or features if you want it on the individual game page.
