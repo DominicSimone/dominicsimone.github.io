@@ -1,16 +1,24 @@
-title: Dominic's Corner
-description: Some writing and some gaming.
-# Important for GitHub Pages:
-# url: https://<your-username>.github.io  # Or your custom domain
-# baseurl: "" # Usually empty for user/org pages, or /repository-name for project pages
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 
-# --- Build Settings ---
-markdown: kramdown
-# Use the GitHub Pages gem locally for better compatibility
+# update with 'bundle update github-pages'
+# run with 'bundle exec jekyll serve'
+
+title: Dominic's Corner
+#email: your-email@example.com
+description: Some writing and some gaming.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://dominicsimone.github.io " # the base hostname & protocol for your site, e.g. http://example.com
+github_username: dominicsimone
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  # Add other plugins if needed (ensure they are supported by GitHub Pages or use Actions)
 
 # --- Collections ---
 collections:
