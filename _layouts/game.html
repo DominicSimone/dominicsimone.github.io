@@ -3,23 +3,18 @@ layout: default # Inherit from the base layout
 ---
 
 <article class="game-page">
+  <link rel="stylesheet" href="/assets/wasm4/wasm.css">
   <h1>{{ page.title }}</h1>
   <p class="game-meta">Added: {{ page.date | date: "%B %d, %Y" }}</p>
+  <script src="/assets/wasm4/wasm.js"></script>
 
-  <div class="game-container">
-    <canvas id="wasm4-canvas"></canvas>
-    <script type="module">
-      import * as w4 from '{{ "/assets/wasm4/wasm4.js" | relative_url }}'; // Ensure path is correct
-      const CART_URL = '{{ page.cartridge | relative_url }}'; // Get cartridge path from Front Matter
+<!-- ERROR '/games/tictactoe/cart.wasm' Need to either find a way to puyt the cartridge here or alter wasm.js-->
 
-      w4.init(CART_URL).then(cart => {
-        w4.run(cart);
-      });
-    </script>
-    </div>
+  <script id="wasm4-cart" type="application/json">{"WASM4_URL": "{{ page.cart }}"}</script>
+  <wasm4-app></wasm4-app>
 
   <h2>Description</h2>
-  <p>{{ page.description | markdownify }}</p>
+  {{ page.description | markdownify }}
 
   <h2>Controls</h2>
   <p>{{ page.controls }}</p>

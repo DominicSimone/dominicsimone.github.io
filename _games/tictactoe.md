@@ -1,14 +1,13 @@
 ---
 layout: game # Uses _layouts/game.html (because output: true)
-title: "Example Game"
+title: "Tic Tac Toe"
 # Date helps sorting for "Recent Games" listing
-date: 2025-04-20 # Date added/updated
+date: 2025-04-24 # Date added/updated
 # Paths relative to the site root (use relative_url filter in templates)
-cartridge: /assets/games/cool-blaster/cartridge.wasm
-thumbnail: /assets/games/cool-blaster/thumbnail.png
-description: "Blast your way through waves of enemies!"
-controls: "Arrows: Move, Z: Shoot, X: Bomb"
-# Optional: Add tags/categories if needed
+cart: /assets/games/tictactoe/tictactoe-cart-opt.wasm 
+thumbnail: /assets/games/tictactoe/thumbnail.png
+description: "It's a pretty bad tic tac toe, but it works!"
+controls: "Arrows: Move selector, Z/X Place piece"
 # categories: [shooter, action]
 ---
 
