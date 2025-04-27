@@ -1,3 +1,5 @@
-{% comment %}
-Expects a post variable
-{% endcomment %}
+<div class="post-listing">
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+  </li>
+</div>

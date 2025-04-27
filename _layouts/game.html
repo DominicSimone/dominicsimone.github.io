@@ -8,9 +8,10 @@ layout: default # Inherit from the base layout
   <p class="game-meta">Added: {{ page.date | date: "%B %d, %Y" }}</p>
   <script src="/assets/wasm4/wasm.js"></script>
 
-<!-- ERROR '/games/tictactoe/cart.wasm' Need to either find a way to puyt the cartridge here or alter wasm.js-->
 
   <script id="wasm4-cart" type="application/json">{"WASM4_URL": "{{ page.cart }}"}</script>
+
+  <!-- Need to put the app in some sort of container, mobile it does some shenanigans and covers stuff with the virtual gamepad -->
   <wasm4-app></wasm4-app>
 
   <h2>Description</h2>

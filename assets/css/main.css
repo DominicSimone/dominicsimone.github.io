@@ -1,0 +1,33 @@
+:root {
+  --primary-color: #CD5334;
+  --secondary-color: #722E1D;
+  --background-color: #512115;
+  --emphasis-color: #34AECD;
+  --emphasis-secondary-color: #247c92;
+  --text-color: whitesmoke;
+}
+
+body {
+  font: 1.5em/150% Helvetica, sans-serif;
+  color: var(--text-color);
+  padding: 1em;
+  margin: 0 auto;
+  background-color: var(--background-color);
+}
+
+a {
+  color: var(--text-color);
+}
+
+.game-card {
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  background-color: var(--primary-color);
+}
+
+
+.post-listing {
+
+}
+
