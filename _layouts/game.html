@@ -8,7 +8,6 @@ layout: default # Inherit from the base layout
   <p class="game-meta">Added: {{ page.date | date: "%B %d, %Y" }}</p>
   <script src="/assets/wasm4/wasm.js"></script>
 
-
   <script id="wasm4-cart" type="application/json">{"WASM4_URL": "{{ page.cart }}"}</script>
 
   <!-- Need to put the app in some sort of container, mobile it does some shenanigans and covers stuff with the virtual gamepad -->
@@ -18,12 +17,9 @@ layout: default # Inherit from the base layout
   {{ page.description | markdownify }}
 
   <h2>Controls</h2>
-  <p>{{ page.controls }}</p>
+  {{ page.controls | markdownify}}
 
-  {% if page.content != "" %}
-    <hr>
-    <h2>Notes</h2>
-    {{ content }} 
-  {% endif %}
+  <hr>
+  {{ content | markdownify }} 
 
 </article>
