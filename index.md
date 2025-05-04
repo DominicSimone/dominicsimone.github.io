@@ -3,8 +3,6 @@ layout: default # Or another base layout
 title: Home
 ---
 
-Welcome to my web page, my name is Dominic.
-
 ## Recent Posts
 
 {% assign recent_posts = site.posts | slice: 0, 5 %} 
@@ -12,7 +10,6 @@ Welcome to my web page, my name is Dominic.
   <ul>
     {% for post in recent_posts %}
       {% include post_listing.html post=post %}
-      
     {% endfor %}
   </ul>
   <p><a href="{{ '/all-posts' | relative_url }}">See all posts...</a></p>
